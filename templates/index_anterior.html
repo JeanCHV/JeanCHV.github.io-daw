@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="img/logo.svg">
+
+    <title>Tienda informatica</title>
+</head>
+
+<body>
+
+    <!--Header-->
+    
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-danger cabecera text-light ">
+        <div class="container cabecera1 ">
+            <a href="./index.html">
+                <img src="img/logo_Txt.svg" width="225" alt="align-items-center" height="80" position="align-items-center">
+            </a>
+        </div> -->
+
+        
+        <!--Input Buscar-->
+<!--         <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" maxlength="256" size="256" placeholder="Buscar"
+                aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg>
+            </button>
+        </form>
+        <div class="container-fluid"> -->
+
+
+            <!--Button carrito-->
+ <!--            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 d-flex align-items-center">
+                <a href="/pages/user/login.html" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white"
+                        class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg>
+
+                    <path
+                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                    </svg>
+                </a>
+
+                <a href="/pages/carrito.html"> -->
+                    <!--svg carrito-->
+<!--                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-cart3"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg>
+                </a>
+                &nbsp;&nbsp;&nbsp; -->
+                <!--SVG User-->
+<!--</nav> -->
+
+        <!-- Header -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger cabecera text-light">
+            <div class="container d-flex justify-content-between align-items-center">
+    
+                <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+                    <img src="img/logo.svg" width="225" alt="align-items-center" height="80" position="align-items-center">
+                    
+                </a>
+    
+                <button class="navbar-toggler border-0" type="button" 
+                data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                    <div class="flex-fill">
+                        <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html"><b>Inicio</b></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html"><b>Acerca de Nosotros</b> s</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="shop.html"><b>Productos</b></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html" ><b>Contactanos</b></a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="navbar align-self-center d-flex">
+                        <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                                <div class="input-group-text">
+                                    <i class="fa fa-fw fa-search"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                            <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                        </a>
+                        <a class="nav-icon position-relative text-decoration-none" href="#">
+                            <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                            <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
+                        </a>
+                        <a class="nav-icon position-relative text-decoration-none" href="#">
+                            <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                            <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
+                        </a>
+                    </div>
+                </div>
+    
+            </div>
+        </nav>
+        <!-- Close Header -->
+
+    <!--NAVBAR-->
+
+    <nav class="navbar navbar-expand-lg " style="background-color: #004E63;">
+
+        <div class="container-fluid">
+
+            <!--Dropdown Categorias-->
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                    data-bs-display="static" aria-expanded="false">
+                    Categorias
+                </button>
+                <ul class="dropdown-menu ">
+                    <li><button class="dropdown-item" type="button">PC's</button></li>
+                    <li><button class="dropdown-item" type="button">Laptops</button></li>
+                    <li><button class="dropdown-item" type="button">Impresoras</button></li>
+                    <li><button class="dropdown-item" type="button">Software</button></li>
+                    <li><button class="dropdown-item" type="button">Servicios</button></li>
+                    <li><button class="dropdown-item" type="button">Accesorios</button></li>
+                </ul>
+            </div>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"
+                            style="color:white ;">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/productos/productos.index.html"
+                            style="color:white ;">Catalogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="compras.html" style="color:white ;">Ofertas del Dia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="proyectos.html" style="color:white ;">Marcas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html" style="color:white ;">Acerca de Nosotros</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carrousel- Nuevos-->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/new_1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/new_2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/new_3.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+    
+
+    </div>
+
+    <div>Nuevos Productos</div>
+
+    <div class="
+    row
+    gx-4 gx-lg-5
+    row-cols-2 row-cols-md-3 row-cols-xl-4
+    justify-content-center
+  ">
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Product image-->
+                <img class="card-img-top" src="../../img/productos/TecladoLogitec1-redi.jpg" alt="..." />
+
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <div class="d-flex justify-content-center text-warning">
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star"></div>
+                        </div>
+                        <!-- Product name-->
+                        <h5 class="fw-bolder">Teclado Logitec G213</h5>
+                        <!-- Product price-->
+                        S/ 150.00
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center">
+                        <a class="btn btn-outline-dark mt-auto" href="producto1.html">Ver producto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Sale badge-->
+                <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                    Oferta
+                </div>
+                <!-- Product image-->
+                <img class="card-img-top" src="../../img/productos/prod_2.jpg" alt="..." />
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <div class="d-flex justify-content-center text-warning">
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star"></div>
+                        </div>
+                        <!-- Product name-->
+                        <h5 class="fw-bolder">Corsair Ram DDR4 8Gb</h5>
+                        <!-- Product price-->
+                        <span class="text-muted text-decoration-line-through">S/ 269</span>
+                        S/ 199
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center">
+                        <a class="btn btn-outline-dark mt-auto" href="#">Ver producto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Sale badge-->
+                <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                    Oferta
+                </div>
+                <!-- Product image-->
+                <img class="card-img-top" src="../../img/productos/prod_3.jpg" alt="..." />
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <div class="d-flex justify-content-center text-warning">
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star"></div>
+                        </div>
+                        <!-- Product name-->
+                        <h5 class="fw-bolder">WD_BLACK NVME SN770 SSD 250GB</h5>
+                        <!-- Product price-->
+                        <span class="text-muted text-decoration-line-through">S/ 450</span>
+                        S/ 369
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center">
+                        <a class="btn btn-outline-dark mt-auto" href="#">Ver producto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Product image-->
+                <img class="card-img-top" src="../../img/productos/prod_4.jpg" alt="..." />
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <div class="d-flex justify-content-center text-warning">
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star"></div>
+                        </div>
+                        <!-- Product name-->
+                        <h5 class="fw-bolder">DISCO SSD T-FORCE VULCAN Z 512GB</h5>
+                        <!-- Product reviews-->
+
+                        <!-- Product price-->
+                        S/ 259.99
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center">
+                        <a class="btn btn-outline-dark mt-auto" href="#">Ver producto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Sale badge-->
+                <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                    Oferta
+                </div>
+                <!-- Product image-->
+                <img class="card-img-top" src="../../img/productos/prod_5.jpg" alt="..." />
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <div class="d-flex justify-content-center text-warning">
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                        </div>
+                        <h5 class="fw-bolder">PLACA MADRE ASUS PRIME H610M-K D4</h5>
+                        <!-- Product price-->
+                        <span class="text-muted text-decoration-line-through">S/ 440</span>
+                        S/ 361.99
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center">
+                        <a class="btn btn-outline-dark mt-auto" href="#">Ver producto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Product image-->
+                <img class="card-img-top" src="../../img/productos/prod_6.jpg" alt="..." />
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <div class="d-flex justify-content-center text-warning">
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                        </div>
+                        <!-- Product name-->
+                        <h5 class="fw-bolder">
+                            PLACA MADRE ASUS TUF GAMING B550 PLUS
+                        </h5>
+                        <!-- Product price-->
+                        S/ 361.99
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center">
+                        <a class="btn btn-outline-dark mt-auto" href="#">Ver producto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Sale badge-->
+                <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                    Oferta
+                </div>
+                <!-- Product image-->
+                <img class="card-img-top" style="border: 2px black solid" src="../../img/productos/prod_7.jpg"
+                    alt="..." />
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <div class="d-flex justify-content-center text-warning">
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                        </div>
+                        <!-- Product name-->
+                        <h5 class="fw-bolder">NUEVO MOUSE GAMING LOGITECH G502</h5>
+                        <!-- Product reviews-->
+
+                        <!-- Product price-->
+                        <span class="text-muted text-decoration-line-through">S/ 299</span>
+                        S/ 235
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center">
+                        <a class="btn btn-outline-dark mt-auto" href="#">Ver producto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Product image-->
+                <img style="border: 2px black solid" class="card-img-top" src="../../img/productos/prod_8.jpg"
+                    alt="..." />
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <div class="d-flex justify-content-center text-warning">
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                        </div>
+                        <!-- Product name-->
+                        <h5 class="fw-bolder">MOSE GAMING LOGITECH G502 KDA LOL</h5>
+                        <!-- Product reviews-->
+
+                        <!-- Product price-->
+                        S/ 299
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center">
+                        <a class="btn btn-outline-dark mt-auto" href="#">Ver producto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!--Footer-->
+    <div class="row">
+        <footer class=" text-center text-white" style="background-color:#6C757D">
+            <!-- Grid container -->
+            <div class="container p-4" style="margin-bottom: 1%;">
+
+                <!-- Section: Links -->
+                <section class="">
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-3">
+                            <h6 class="text-uppercase fw-bold mb-4">CONTACTANOS</h6>
+                            <p><i class="fas fa-phone me-3"></i>+51 01 252525</p>
+                            <p><i class="fas fa-phone me-3"></i> +51 01 262626</p>
+                            <p><i class="fas fa-home me-3"></i> Av. Emancipación 799, Lima 15001</p>
+                            <p><i class="fas fa-envelope me-3"></i>
+                                contacto@usatstore.com
+                            </p>
+
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h6 class="text-uppercase fw-bold mb-4"> Redes Sociales:</h6>
+
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998"
+                                href="https://es-la.facebook.com" target="_blank" role="button"><i
+                                    class="fab fa-facebook"></i></a>
+
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #6e24a0"
+                                href="https://www.instagram.com/?hl=es-la" target="_blank" role="button"><i
+                                    class="fab fa-instagram"></i></i></a>
+                            <br>
+
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #23b8dd;"
+                                href="https://twitter.com" target="_blank" role="button"><i
+                                    class="fab fa-twitter-square"></i></a>
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #cc1717"
+                                href="https://www.youtube.com" target="_blank" role="button"> <i
+                                    class="fab fa-youtube-square"></i></a>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-3">
+                            <h6 class="text-uppercase fw-bold mb-4">
+
+                                UBÍCANOS EN</h6>
+                            <table class="table text-center text-white">
+                                <tbody class="fw-normal">
+                                    <tr>
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62431.67392058356!2d-77.10625656875!3d-12.044923099999988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8cc68c0ab35%3A0x2f13ee788112e384!2sFarmacia%20Universal!5e0!3m2!1ses-419!2spe!4v1668717364239!5m2!1ses-419!2spe"
+                                            width="100%" height="80%" style="border:0;" allowfullscreen=""
+                                            loading="lazy"></iframe>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </section>
+                <!-- Section: Links -->
+            </div>
+            <!-- Grid container -->
+
+
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="js/programa.js"></script>
+</body>
+
+</html>

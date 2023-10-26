@@ -1,0 +1,46 @@
+{% extends "index.html" %}
+{%block contenido %}
+    
+    <section class="section">
+    <div class="columns">
+        <div class="column" >
+            <img src="{{url_for('static', filename='productos.jpg')}}" width='400' height ='300' />
+            <h3 class="is-size-3">Productos</h3>
+            <a href="{{url_for('formulario_agregar_productos')}}" class="button is-success">Agregar</a>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID Producto</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- {% for disco in discos %} -->
+                    <tr>
+                        <td>{{productos[1]}}</td>
+                        <td>{{productos[2]}}</td>
+                        <td>{{productos[3]}}</td>
+                        <td>{{productos[4]}}</td>
+                        <td>{{productos[5]}}</td>
+                        <td>
+                            <!-- {# Pasar el id (lo que hay en disco[0] #} -->
+                            <a href="{{url_for('editar_productos', id=productos[0])}}" class="button is-info">Editar</a>
+                        </td>
+                        <td>
+                            <form action="{{url_for('eliminar_productos')}}" method="POST">
+                                <input type="hidden" name="id" value="{{productos[0]}}">
+                                <button class="button is-danger">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <!-- {% endfor %} -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+{% endblock %}   
+

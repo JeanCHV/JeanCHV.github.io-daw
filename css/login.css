@@ -1,0 +1,31 @@
+/* Estilos para el fondo del body */
+body {
+  background-color: #508bfc;
+}
+
+/* Estilos para la sección de inicio de sesión */
+#login-section {
+  background-color: #508bfc;
+}
+
+/* Estilos para la tarjeta de inicio de sesión */
+#login-card {
+  background: hsla(0, 0%, 120%, 0.55);
+  backdrop-filter: blur(30px);
+}
+
+/* Estilos para los botones de inicio de sesión */
+#google-login {
+  background-color: #dd4b39;
+}
+
+#facebook-login {
+  background-color: #3b5998;
+}
+
+/* Estilos para los campos de entrada de usuario y contraseña */
+.form-control {
+  background-color: transparent;
+}
+
+/* Otros estilos específicos que desees agregar */

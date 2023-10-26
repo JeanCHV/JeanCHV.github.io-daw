@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../img/logo.svg" />
+    <title>CARRITO DE COMPRA</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../css/componentes/linea-progreso.css" />
+    <link rel="stylesheet" href="../css/carrito.css" />
+
+
+
+</head>
+
+<body>
+    <nav>
+        <div style="background-color: red; color: white; text-align: center">
+            <br /><br /><br />
+            Menú
+            <br /><br /><br />
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+    <!--https://levelup.gitconnected.com/create-a-multi-step-form-using-html-css-and-javascript-30aca5c062fc -->
+    <div style="margin-left: 50px; margin-right: 50px;">
+        <br><br>
+        <h1>Progreso</h1>
+        <div id="multi-step-form-container">
+            <!-- Form Steps / Progress Bar -->
+            <ul class="form-stepper form-stepper-horizontal text-center mx-auto pl-0">
+                <!-- Step 1 -->
+                <li class="form-stepper-active text-center form-stepper-list" step="1">
+                    <a class="mx-2">
+                        <span class="form-stepper-circle">
+                            <span>1</span>
+                        </span>
+                        <div class="label">RESUMEN DE COMPRA</div>
+                    </a>
+                </li>
+                <!-- Step 2 -->
+                <li class="form-stepper-unfinished text-center form-stepper-list" step="2">
+                    <a class="mx-2">
+                        <span class="form-stepper-circle text-muted">
+                            <span>2</span>
+                        </span>
+                        <div class="label text-muted">OPCIONES DE ENVÍO</div>
+                    </a>
+                </li>
+                <!-- Step 3 -->
+                <li class="form-stepper-unfinished text-center form-stepper-list" step="3">
+                    <a class="mx-2">
+                        <span class="form-stepper-circle text-muted">
+                            <span>3</span>
+                        </span>
+                        <div class="label text-muted">Método de pago</div>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container mb-4">
+        <div class="row">
+
+
+            <div class="col mb-2">
+                <div class="row">
+                    <!-- Step Wise Form Content -->
+                    <form id="userAccountSetupForm" name="userAccountSetupForm" enctype="multipart/form-data"
+                        method="POST">
+                        <!-- Step 1 Content -->
+                        <section id="step-1" class="form-step">
+                            <h2 class="font-normal">PRODUCTOS</h2>
+                            <!-- Step 1 input fields -->
+                            <div class="mt-3">
+                                <div class="col-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col"></th>
+                                                    <th scope="col">Producto</th>
+                                                    <th scope="col">Disponible</th>
+                                                    <th scope="col" class="text-center">Cantidad</th>
+                                                    <th scope="col" class="text-right">Precio</th>
+                                                    <th scope="col" class="text-right">Eliminar</th>
+                                                    <th scope="col" class="text-right">P. total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><img src="../../img/productos/TecladoLogitec1-redi.jpg"
+                                                            width="50" height="50" /></td>
+                                                    <td>Teclado Logitec G213</td>
+                                                    <td class="text-success">En Stock</td>
+                                                    <td><input class="form-control" type="text" value="2" /></td>
+                                                    <td class="text-right">S/ 150.00</td>
+                                                    <td class="text-right">
+                                                        <button class="btn btn-sm btn-danger">
+                                                            <i class="fa fa-trash"></i>
+                                                        </button>
+                                                    </td>
+                                                    <td class="text-right">S/ 300.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="../../img/productos/prod_2.jpg" width="50"
+                                                            height="50" /></td>
+                                                    <td>Corsair Ram DDR4 8Gb</td>
+                                                    <td class="text-success">En Stock</td>
+                                                    <td><input class="form-control" type="text" value="1" /></td>
+                                                    <td class="text-right">S/. 199.00</td>
+                                                    <td class="text-right">
+                                                        <button class="btn btn-sm btn-danger">
+                                                            <i class="fa fa-trash"></i>
+                                                        </button>
+                                                    </td>
+                                                    <td class="text-right">S/ 199.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="../../img/productos/prod_3.jpg" width="50"
+                                                            height="50" /></td>
+                                                    <td>WD_BLACK NVME SN770 SSD 250GB</td>
+                                                    <td class="text-success">En Stock</td>
+                                                    <td><input class="form-control" type="text" value="1" /></td>
+                                                    <td class="text-right">S/. 369.00</td>
+                                                    <td class="text-right">
+                                                        <button class="btn btn-sm btn-danger">
+                                                            <i class="fa fa-trash"></i>
+                                                        </button>
+                                                    </td>
+                                                    <td class="text-right">S/ 369.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>Sub-Total</td>
+                                                    <td class="text-right">S/ 768.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <th></th>
+                                                    <td>Transporte</td>
+                                                    <td class="text-right">S/ 50.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <th></th>
+                                                    <td><strong>Total</strong></td>
+                                                    <td class="text-right"><strong>S/ 818.00</strong></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="coupon col-md-5 col-sm-5 no-padding-left pull-left">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Código promocional">
+                                                </div>
+                                                <div class="col-6">
+                                                    <input type="submit" class="btn btn-secondary" value="Usar">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="mt-3">
+                                <button class="button btn-navigate-form-step" type="button"
+                                    style="background-color: green;" step_number="2">Continuar</button>
+                            </div>
+                        </section>
+                        <!-- Step 2 Content, default hidden on page load. -->
+                        <section id="step-2" class="form-step d-none">
+
+                            <!-- Step 2 input fields -->
+                            <div class="mt-3">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h2 class="font-normal">INFORMACION DE CONTACTO</h2>
+                                        <hr style="margin-top: 0px;">
+                                        <form action='' class="row g-3 needs-validation" method="post" novalidate>
+                                            <div class="col-12">
+                                                <label for="exampleInputEmail1" class="form-label">
+                                                    Correo Electrónico
+                                                </label>
+
+                                                <input type="email" placeholder="correo_electronico@gmail.com"
+                                                    class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" required>
+                                                <div id="emailHelp" class="form-text">Si te registras, ya no te
+                                                    pediremos estos datos</div>
+                                            </div>
+                                            <div class="col-12 mt-2">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label for="validationCustom01"
+                                                            class="form-label">Nombre</label>
+                                                        <input type="text" placeholder="Jhon" class="form-control"
+                                                            id="validationCustom01" value="" required>
+                                                        <div class="valid-feedback">
+                                                            Exelente!
+                                                        </div>
+                                                        <div class="invalid-feedback">
+                                                            Corrige!
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="validationCustom02"
+                                                            class="form-label">Apellido</label>
+                                                        <input type="text" placeholder="Doe" class="form-control"
+                                                            id="validationCustom02" value="" required>
+                                                        <div class="valid-feedback">
+                                                            Exelente!
+                                                        </div>
+                                                        <div class="invalid-feedback">
+                                                            Corrige!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mt-2">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label for="validationCustom04" class="form-label">Tipo de
+                                                            documento</label>
+                                                        <select class="form-select" id="validationCustom04" required>
+                                                            <option selected disabled value="">Selecciona uno</option>
+                                                            <option>DNI</option>
+                                                            <option>CARNET DE EXTRANGERÍA</option>
+                                                            <option>PASAPORTE</option>
+                                                        </select>
+                                                        <div class="invalid-feedback">
+                                                            Por favor selecciona una opción.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="validationCustom01" class="form-label">N°
+                                                            Documento</label>
+                                                        <input type="number" placeholder="78787878" maxlength="8"
+                                                            class="form-control" id="validationCustom01" value=""
+                                                            required>
+                                                        <div class="valid-feedback">
+                                                            Exelente!
+                                                        </div>
+                                                        <div class="invalid-feedback">
+                                                            Corrige!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col mt-2">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label for="validationCustom04"
+                                                            class="form-label">Departamento</label>
+                                                        <select class="form-select" id="validationCustom04" required>
+                                                            <option selected disabled value="">Selecciona uno
+                                                            </option>
+                                                            <option>LAMBAYEQUE</option>
+                                                            <option>LIMA</option>
+                                                            <option>TRUJILLO</option>
+                                                            <option>PIURA</option>
+                                                            <option>CAJAMARCA</option>
+                                                        </select>
+                                                        <div class="invalid-feedback">
+                                                            Por favor selecciona una opción.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="validationCustom04"
+                                                            class="form-label">Provincia</label>
+                                                        <select class="form-select" id="validationCustom04" required>
+                                                            <option selected disabled value="">Selecciona uno
+                                                            </option>
+                                                            <option>CHICLAYO</option>
+                                                            <option>LAMBAYEQUE</option>
+                                                            <option>FERREÑAFE</option>
+                                                        </select>
+                                                        <div class="invalid-feedback">
+                                                            Por favor selecciona una opción.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col mt-2">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label for="validationCustom04"
+                                                            class="form-label">Distrito</label>
+                                                        <select class="form-select" id="validationCustom04" required>
+                                                            <option selected disabled value="">Selecciona uno
+                                                            </option>
+                                                            <option>CHICLAYO</option>
+                                                            <option>JOSE LEONARDO ORTIZ</option>
+                                                            <option>LA VICTORIA</option>
+                                                        </select>
+                                                        <div class="invalid-feedback">
+                                                            Por favor selecciona una opción.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="validationCustom05" class="form-label">Codigo
+                                                            Postal</label>
+                                                        <input type="number" class="form-control"
+                                                            id="validationCustom05" required>
+                                                        <div class="valid-feedback">
+                                                            Exelente!
+                                                        </div>
+                                                        <div class="invalid-feedback">
+                                                            Corrige!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mt-2">
+                                                <label for="validationCustom03" class="form-label">Dirección</label>
+                                                <input type="text" class="form-control" id="validationCustom03"
+                                                    required>
+                                                <div class="invalid-feedback">
+                                                    Dirección de entrega inválida
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mt-2">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="invalidCheck" required>
+                                                <label class="form-check-label" for="invalidCheck">
+                                                    Acepto los terminos y condiciones
+                                                </label>
+                                                <div class="invalid-feedback">
+                                                    Acepta los terminos y condiciones de la plataforma
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="invalidCheck">
+                                                <label class="form-check-label" for="invalidCheck">
+                                                    Deséo recibir novedades, descuentos y promociones en mi correo.
+                                                </label>
+                                            </div>
+                                            <br>
+                                            <div class="col-12">
+                                                <button id="btnGuardarDatos" class="btn btn-secondary" type="submit"
+                                                    onclick="procesar()">Guardar datos</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h2 class="font-normal">RESUMEN DE PRODUCTOS</h2>
+                                        <hr style="margin-top: 0px;">
+
+                                        <div id="carouselExampleControls" class="carousel slide"
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <div class="card">
+                                                        <img style="border: 2px black solid;"
+                                                            src="../../img/productos/TecladoLogitec1-redi.jpg"
+                                                            class="card-img-top img-ps" alt="...">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">2 x TECLADO LOGITECH G213
+                                                            </h5>
+                                                            <h3 class="card-text sl-2 text-center">S/ 300</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="card">
+                                                        <img src="../../img/productos/prod_2.jpg"
+                                                            class="card-img-top img-ps" alt="...">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">1 x CORSAIR VENGEANCE RGB PRO 8GB
+                                                            </h5>
+                                                            <h3 class="card-text sl-2 text-center">S/ 199</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="card">
+                                                        <img src="../../img/productos/prod_3.jpg"
+                                                            class="card-img-top img-ps" alt="...">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">1 x WD_BLACK NVME SN770 SSD 250GB
+                                                            </h5>
+                                                            <h3 class="card-text sl-2 text-center">S/ 369</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <button style="background-color: red" ; class="button btn-navigate-form-step"
+                                    type="button" step_number="1">Regresar al resumen de compra</button>
+                                <button style="background-color: green;" id="btnSiguienteS2"
+                                    class="button btn-navigate-form-step " type="button" step_number="3"
+                                    disabled>Continuar</button>
+                            </div>
+                        </section>
+                        <!-- Step 3 Content, default hidden on page load. -->
+                        <section id="step-3" class="form-step d-none">
+                            <h2 class="font-normal">INFORMACION DE PAGO</h2>
+                            <!-- Step 3 input fields -->
+                            <div class="mt-3">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="row">
+                                                    <div class="card" style="width: 100%;">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title"> Medios de Pago </h5>
+                                                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                                            <p class="card-text">Some quick example text to build on the
+                                                                card title and make up the bulk of the card's content.
+                                                            </p>
+                                                            <a href="#" class="card-link">Card link</a>
+                                                            <a href="#" class="card-link">Another link</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="card" style="width: 100%;">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Informaicon de tarjeta</h5>
+                                                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                                            <p class="card-text">Some quick example text to build on the
+                                                                card title and make up the bulk of the card's content.
+                                                            </p>
+                                                            <a href="#" class="card-link">Card link</a>
+                                                            <a href="#" class="card-link">Another link</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="row">
+                                            <div class="card" style="width: 100%;">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Datos de entrega</h5>
+                                                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                                    <p class="card-text">Some quick example text to build on the card
+                                                        title and make up the bulk of the card's content.</p>
+                                                    <a href="#" class="card-link">Card link</a>
+                                                    <a href="#" class="card-link">Another link</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <button class="button btn-navigate-form-step" type="button"
+                                    step_number="2">Prev</button>
+                                <button class="button submit-btn" type="submit">Save</button>
+                            </div>
+                        </section>
+                    </form>
+                    <div class="text-center">
+                        <img src="https://machupicchuviajesperu.com/wp-content/uploads/2021/08/visa.jpg"
+                            class="img-fluid" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer style="background-color: black; text-align: center">
+        <br /><br /><br /><br />
+        <div style="color: white">Footter</div>
+        <br /><br /><br /><br />
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+    <script src="../js/componentes/linea-progreso.js"></script>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/componentes/formularioCarrito.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+{% extends "index.html" %}
+
+{% block contenido %}
+<div class="container mt-5">
+    <h1>Registro de Usuario</h1>
+    <form method="post" action="{{ url_for('registrar_usuario') }}">
+        <div class="mb-3">
+            <label for="username" class="form-label">Nombre de Usuario</label>
+            <input type="text" class="form-control" id="username" name="username" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Correo</label>
+            <input  type="email" class="form-control " id="email" name="email" id="email" />
+        </div>
+          
+        <button type="submit" class="btn btn-primary">Registrar</button>
+    </form>
+</div>
+<!-- Agrega este código al final de tu formulario de registro en tu archivo "register.html" -->
+<div class="modal fade" id="registroExitosoModal" tabindex="-1" role="dialog" aria-labelledby="registroExitosoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registroExitosoModalLabel">Registro Exitoso</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ¡Tu registro se ha completado con éxito!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}

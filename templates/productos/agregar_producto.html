@@ -1,0 +1,63 @@
+{% extends "index.html" %}
+{% block titulo %}
+Agregar Producto
+{% endblock %}
+{% block contenido %}
+<section class="section">
+    <!-- <div class="columns">
+        <div class="column is-one-third">
+            <h3 class="is-size-3">Agregar Producto</h3>
+            <form action="{{url_for('guardar_producto')}}" method="post">
+                <label for="codigo">Código:</label>
+                <input required type="text" class="input" placeholder="Código" name="codigo" id="codigo">
+                <label for="nombre">Nombre:</label>
+                <input required type="text" class="input" placeholder="Nombre" name="nombre" id="nombre">
+                <label for="artista">Artista</label>
+                <input required type="text" class="input" placeholder="Artista" name="artista" id="artista">
+                <label for="precio">Precio</label>
+                <input required type="number" class="input" placeholder="Precio" name="precio" id="precio">
+                <label for="artista">Género</label>
+                <input required type="text" class="input" placeholder="Género" name="genero" id="genero">
+                <button type="submit" class="button is-success mt-2">Guardar</button>
+                <a href="{{url_for('productos')}}" class="button is-primary mt-2">Volver</a>
+            </form>
+        </div>
+    </div> -->
+    <a href="{{url_for('formulario_agregar_producto')}}" class="button is-success">Agregar</a>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for producto in productos %}
+            <tr>
+                <th scope="row">a</th>
+                <td>{{producto[0]}}</td>
+                <td>{{producto[1]}}</td>
+                <td>{{producto[2]}}</td>
+                <td>{{producto[3]}}</td>
+                <td>{{producto[4]}}</td>
+                <td>
+                    {# Pasar el id (lo que hay en productos[0] #}
+                    <a href="{{url_for('editar_producto', id=producto[0])}}" class="button is-info">Editar</a>
+                </td>
+                <td>
+                    <form action="{{url_for('eliminar_producto')}}" method="POST">
+                        <input type="hidden" name="id" value="{{producto[0]}}">
+                        <button class="button is-danger">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endblock %}

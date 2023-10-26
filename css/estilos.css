@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.header-contenedor {
+  background-image: linear-gradient(
+    to bottom,
+    #708cfd 0%,
+    #99adfd 40%,
+    #b9cbfc 55%,
+    #d4dcf7 100%
+  );
+}
+/*NAVBAR*/
+/* /* .navbar-expand-md .navbar-collapse { */
+  display: flex !important;
+  flex-basis: auto;
+}
+.collapse:not(.show) {
+  display: none;
+}
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.cabecera {
+  border-bottom: 2px solid red;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cabecera1 {
+  margin-left: 5em;
+  padding-top: 60px;
+}
+
+#menu li > a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3f3f3f;
+}
+
+#menu form > button {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.carousel-inner {
+  min-width: 100%;
+}
+
+.texto-principal {
+  background-image: linear-gradient(
+    to bottom,
+    #8ca3ff 0%,
+    #b5c4ff 40%,
+    #d6e1ff 55%,
+    #eff2fc 100%
+  );
+  text-align: center;
+}
+
+.a {
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.texto-principal-2 {
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(
+    to right,
+    #1e3791 0%,
+    #2948b1 40%,
+    #3153c6 55%,
+    #385fda 60%
+  );
+  color: transparent;
+}
+
+#footer-seccion {
+  position: relative;
+}
+
+.footer-estructura {
+  margin-top: -13em;
+}
+
+.footer-color {
+  background-color: #111113;
+}
+
+.footer-texto {
+  font-size: 0.8em;
+}
+
+.acercade {
+  text-align: justify;
+}
+
+.carrito {
+  font-size: 35px;
+  font-weight: bold;
+  color: rgb(243, 203, 22);
+}
+
+.carrito:hover {
+  color: #eba605;
+}
+
+.user {
+  margin-right: 1em;
+  font-size: 35px;
+  font-weight: bold;
+  color: #333;
+}
+
+.user:hover {
+  color: #000;
+} 
+
+/* Input Search de NavBar*/
+.topsearch
+    {
+    height: 40px;
+    line-height: 35px;
+    padding-right: 10px;
+    width:100%;
+    display:table;
+    }
+
+.topsearch label
+    {
+    color: #c98116;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 0.9em;
+    margin: 0 5px;
+    }
+
+.topsearch label, .topsearch form
+    {
+    display: inline;
+    } 
+
+.topsearchfield
+    {
+    border: none;
+    height: 24px;
+    font-size: 15px;
+    width: auto;
+    } 
+#field-topsearch{width:80%; display:inline-block;}
+.button-start-search submit
+    {
+    display: table-cell;
+    } 
+
+#slider {
+  padding-bottom: 45px;
+}
+section {
+  display: block;
+}
+
+
+
+
+ 

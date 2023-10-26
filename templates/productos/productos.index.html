@@ -1,0 +1,469 @@
+{% extends "index.html" %}
+{%block contenido %}
+
+<section class="py-5">
+    <!--Barra Filtro-->
+    <div class="container px-4 px-lg-5">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 style="text-align: center" class="offcanvas-title" id="offcanvasExampleLabel">
+                    Categorías
+                </h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <img width="100%"
+                    src="https://gifdb.com/images/high/pixel-art-super-mario-computer-amwdq1xi8bgz0omx.webp" alt="" />
+                <div class="dropdown mt-3">
+                    <button class="btn btn-secondary m-2" type="button">
+                        Placa Madre
+                    </button>
+                    <button class="btn btn-secondary m-2" type="button">
+                        Procesadores
+                    </button>
+                    <button class="btn btn-secondary m-2" type="button">
+                        Memoria RAM
+                    </button>
+                    <button class="btn btn-secondary m-2" type="button">
+                        Tarjetas de video
+                    </button>
+                    <button class="btn btn-secondary m-2" type="button">
+                        Disco Duro Interno
+                    </button>
+                    <button class="btn btn-secondary m-2" type="button">
+                        Unidades SSD
+                    </button>
+                    <button class="btn btn-secondary m-2" type="button">CASE</button>
+                    <button class="btn btn-secondary m-2" type="button">
+                        Fuentes de poder
+                    </button>
+                    <button class="btn btn-secondary m-2" type="button">
+                        Tarjetas de red
+                    </button>
+                    <button class="btn btn-secondary m-2" type="button">
+                        Cooler para procesador
+                    </button>
+                    <button class="btn btn-secondary m-2" type="button">
+                        Memoria SODIMM
+                    </button>
+                    <button class="btn btn-secondary m-2" type="button">
+                        Unidades Opticas
+                    </button>
+
+                    <!--                         
+                        <div class="selector">
+                            <div class="price-slider">
+                                <div id="slider-range"
+                                    class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                    <div class="ui-slider-range ui-corner-all ui-widget-header"></div>
+                                    <span tabindex="0"
+                                        class="ui-slider-handle ui-corner-all ui-state-default"></span><span
+                                        tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                                </div>
+                                <span id="min-price" data-currency="S/" class="slider-price">0</span> <span
+                                    class="seperator">-</span> <span id="max-price" data-currency="S/" data-max="3500"
+                                    class="slider-price">3500</span>
+                            </div>
+                        </div>
+                        -->
+
+                    <!--https://codepen.io/glitchworker/pen/XVdKqj -->
+                    <div slider id="slider-distance">
+                        <div>
+                            <div inverse-left style="width:70%;"></div>
+                            <div inverse-right style="width:70%;"></div>
+                            <div range style="left:30%;right:40%;"></div>
+                            <span thumb style="left:30%;"></span>
+                            <span thumb style="left:60%;"></span>
+                            <div sign style="left:30%;">
+                                <span id="value">30</span>
+                            </div>
+                            <div sign style="left:60%;">
+                                <span id="value">60</span>
+                            </div>
+                        </div>
+                        <input type="range" tabindex="0" value="30" max="100" min="0" step="1" oninput="
+                            this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+                            var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+                            var children = this.parentNode.childNodes[1].childNodes;
+                            children[1].style.width=value+'%';
+                            children[5].style.left=value+'%';
+                            children[7].style.left=value+'%';children[11].style.left=value+'%';
+                            children[11].childNodes[1].innerHTML=this.value;" />
+
+                        <input type="range" tabindex="0" value="60" max="100" min="0" step="1" oninput="
+                            this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+                            var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+                            var children = this.parentNode.childNodes[1].childNodes;
+                            children[3].style.width=(100-value)+'%';
+                            children[5].style.right=(100-value)+'%';
+                            children[9].style.left=value+'%';children[13].style.left=value+'%';
+                            children[13].childNodes[1].innerHTML=this.value;" />
+                    </div>
+
+
+                                            
+                          <div class="deque-slider-multirange horizontal">
+                            <h3 class="neutral">Search for house by price</h3>
+                            <span id="label"></span>
+                            <div>
+                              <label>
+                                min
+                                <input type="number" data-class="startInput" />
+                              </label>
+                              <label>
+                                max
+                                <input type="number" data-class="stopInput" />
+                              </label>
+                              <br />
+                              <br />
+                              <div class="slider" style="height: 2px; width: 200px">
+                                <span class="minPricelb"></span>
+                                <span class="maxPricelb"></span>
+                                <span class="colorOverlay"></span>
+                          
+                                <button
+                                  class="minPrice"
+                                  role="slider"
+                                  aria-valuemin="150000"
+                                  aria-valuemax="450000"
+                                  aria-orientation="horizontal"
+                                  aria-label="Min Price"
+                                  aria-valuenow="220000"
+                                  data-increment="10000"
+                                  data-text="start"
+                                >
+                                  <span class="minPriceMovingLb" role="note"></span>
+                                </button>
+                          
+                                <button
+                                  class="maxPrice"
+                                  role="slider"
+                                  aria-valuemin="150000"
+                                  aria-valuemax="450000"
+                                  aria-orientation="horizontal"
+                                  aria-label="Max Price"
+                                  aria-valuenow="360000"
+                                  data-increment="10000"
+                                  data-text="stop"
+                                >
+                                  <span class="maxPriceMovingLb" role="note"></span>
+                                </button>
+                              </div>
+                            </div>
+                            <div style="clear: both; margin-bottom: 20px"><br /></div>
+                          
+                            <div id="alertRegion"></div>
+                          </div>
+
+                         
+                </div>
+            </div>
+        </div>
+        <!--Barra Filtro-->
+
+        <h1>
+            <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                aria-controls="offcanvasExample">
+                <i class="bi bi-funnel"></i></button>Catalogo de productos
+
+        </h1>
+        <h2>
+            {% if esSesionIniciada == True: %}
+
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <a href="{{url_for('formulario_agregar_producto')}}"> <button type="button" class="btn btn-success" >Agregar Producto</button></a>
+           
+
+            <button type="button" class="btn btn-warning">Modificar Producto</button>
+            <button type="button" class="btn btn-danger">Eliminar Producto</button>
+        </div>    
+            {% endif %}
+        
+        </h2>
+       
+
+
+        <div class="
+            row
+            gx-4 gx-lg-5
+            row-cols-2 row-cols-md-3 row-cols-xl-4
+            justify-content-center
+          ">
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="/static/img/productos/TecladoLogitec1-redi.jpg" alt="" />
+
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <div class="d-flex justify-content-center text-warning">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star"></div>
+                            </div>
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Teclado Logitec G213</h5>
+                            <!-- Product price-->
+                            S/ 150.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a class="btn btn-outline-dark mt-auto" href="/templates/productos/producto1.html">Ver producto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                        Oferta
+                    </div>
+                    <!-- Product image-->
+                    <img class="card-img-top" src="/static/img/productos/prod_2.jpg" alt="" />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <div class="d-flex justify-content-center text-warning">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star"></div>
+                            </div>
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Corsair Ram DDR4 8Gb</h5>
+                            <!-- Product price-->
+                            <span class="text-muted text-decoration-line-through">S/ 269</span>
+                            S/ 199
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a class="btn btn-outline-dark mt-auto" href="#">Ver producto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                        Oferta
+                    </div>
+                    <!-- Product image-->
+                    <img class="card-img-top" src="/static/img/productos/prod_3.jpg" alt="" />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <div class="d-flex justify-content-center text-warning">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star"></div>
+                            </div>
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">WD_BLACK NVME SN770 SSD 250GB</h5>
+                            <!-- Product price-->
+                            <span class="text-muted text-decoration-line-through">S/ 450</span>
+                            S/ 369
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a class="btn btn-outline-dark mt-auto" href="#">Ver producto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="/static/img/productos/prod_4.jpg" alt="" />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <div class="d-flex justify-content-center text-warning">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star"></div>
+                            </div>
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">DISCO SSD T-FORCE VULCAN Z 512GB</h5>
+                            <!-- Product reviews-->
+
+                            <!-- Product price-->
+                            S/ 259.99
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a class="btn btn-outline-dark mt-auto" href="#">Ver producto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                        Oferta
+                    </div>
+                    <!-- Product image-->
+                    <img class="card-img-top" src="/static/img/productos/prod_5.jpg" alt="" />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <div class="d-flex justify-content-center text-warning">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <h5 class="fw-bolder">PLACA MADRE ASUS PRIME H610M-K D4</h5>
+                            <!-- Product price-->
+                            <span class="text-muted text-decoration-line-through">S/ 440</span>
+                            S/ 361.99
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a class="btn btn-outline-dark mt-auto" href="#">Ver producto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="/static/img/productos/prod_6.jpg" alt="" />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <div class="d-flex justify-content-center text-warning">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">
+                                PLACA MADRE ASUS TUF GAMING B550 PLUS
+                            </h5>
+                            <!-- Product price-->
+                            S/ 361.99
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a class="btn btn-outline-dark mt-auto" href="#">Ver producto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                        Oferta
+                    </div>
+                    <!-- Product image-->
+                    <img class="card-img-top" style="border: 2px black solid" src="/static/img/productos/prod_7.jpg" alt="" />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <div class="d-flex justify-content-center text-warning">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">NUEVO MOUSE GAMING LOGITECH G502</h5>
+                            <!-- Product reviews-->
+
+                            <!-- Product price-->
+                            <span class="text-muted text-decoration-line-through">S/ 299</span>
+                            S/ 235
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a class="btn btn-outline-dark mt-auto" href="#">Ver producto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img style="border: 2px black solid" class="card-img-top" src="/static/img/productos/prod_8.jpg" alt="" />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <div class="d-flex justify-content-center text-warning">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">MOSE GAMING LOGITECH G502 KDA LOL</h5>
+                            <!-- Product reviews-->
+
+                            <!-- Product price-->
+                            S/ 299
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a class="btn btn-outline-dark mt-auto" href="#">Ver producto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+<!-- <footer style="background-color: black; text-align: center">
+        <br /><br /><br /><br />
+        <div style="color: white">Footter</div>
+        <br /><br /><br /><br />
+    </footer> -->
+
+<!-- JavaScript -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+<script src="https://releases.jquery.com/git/jquery-git.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="/js/componentes/doble-rango.js"></script>
+</body>
+
+</html> -->

@@ -1,0 +1,76 @@
+{% extends "index.html" %}
+{%block contenido %}
+<!-- Formulario de inicio de sesion -->
+  <section class="vh-100" style="background-color: #508bfc;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <h1 class="mb-5"><b>Iniciar Sesión</b></h1>
+            <div class="card cascading-right" style="background: hsla(0, 0%, 120%, 0.55);
+                backdrop-filter: blur(30px);  ">
+              <div class="card-body p-5 text-center">
+
+
+                <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;"
+                type="submit"><i class="fab fa-google me-2"></i>Iniciar Sesion con Google</button>
+                <p></p>
+
+                <button class="btn btn-lg btn-block btn-primary" style="background-color: #3b5998;"type="submit">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="56" height="35" fill="currentColor"
+                    class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path
+                      d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" /></svg></i>Iniciar Sesión con Facebook</button>
+                      <hr class="my-4">
+                      
+                <p>Ingrese sus datos</p>
+
+
+
+                <form action="{{url_for('procesar_login')}}" method="post">
+
+                  <div class="form-outline mb-4">
+
+                    <input required type="username" " class="form-control form-control-lg"
+                      placeholder="Usuario" name="username" id="username"/>
+                   
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input requ|ired type="password"  class="form-control form-control-lg"
+                      placeholder="Contraseña" name="password" id="password"/>
+                    
+                  </div>
+                  <button class="btn btn-primary btn-lg btn-block" type="submit">Iniciar Sesión</button>
+
+                </form>
+
+
+
+                <!-- Checkbox -->
+                <div class="form-check d-flex justify-content-start mb-4">
+                  <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                  <label class="form-check-label" for="form1Example3"> Recordar Cuenta </label>
+                  <div class="col-md-9 d-flex justify-content-center">
+                    <!-- Simple link -->
+                    <a href="#!">¿Olvidaste la Contraseña?</a>
+                  </div>
+                </div>
+                
+              </div>
+
+              <p>¿No tiene cuenta?</p>
+              <a href="/templates/user/register.html">Registrese</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- Agrega este script en tu archivo "login.html" -->
+<script>
+  $(document).ready(function () {
+    $('#registroExitosoModal').modal('show');
+  });
+</script>
+
+  {% endblock %}   
